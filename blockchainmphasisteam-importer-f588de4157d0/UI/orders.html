@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers -Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+</head>
+
+<body >
+  
+        <div id="commonHeader"></div>
+      
+        
+  <div class="container tabMargin">
+<br>  
+  <!-- Nav pills -->
+  <ul class="nav nav-pills nav-justified" role="tablist">
+   
+    <li class="nav-item" id="ao">
+      <a class="nav-link active" data-toggle="pill" href="#allOfferOption">All Purchase Orders</a>
+    </li>
+    
+     <li class="nav-item" id="co">
+      <a class="nav-link" data-toggle="pill" href="#createOfferOption">Create A Purchase Order</a>
+    </li>
+   
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="createOfferOption" class="container tab-pane fade createOfferOpt "><br>
+    
+      <form action="" id="createOfferTab" method="post">
+      
+      <!--       <form action="CreateNewOffer" id="createOfferTab" method="post"> -->
+    <div class="form-group ">
+      <label for="assetName">Asset Name:</label>
+      <input type="text" class="form-control" id="assetName" name="assetName" placeholder="Enter Asset Name" name="assetName" required>
+    </div>
+    <div class="form-group ">
+      <label for="assetDescription">Asset Description:</label>
+      <input type="text" class="form-control" id="assetDescription" placeholder="Enter Asset Description" name="assetDescription" required>
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="text" class="form-control" id="quantity" name="quantity" placeholder="Enter quantity of Asset" required>
+    </div>
+    <div class="form-group">
+      <label for="unit">Unit:</label>
+      <input type="text" class="form-control" id="unit" name="unit"placeholder="Enter unit" required>
+    </div>
+     <div class="form-group">
+      <label for="price">Price (MTK):</label>
+      <input type="text" class="form-control" id="price" name="price"placeholder="Enter Price" required>
+    </div>
+    <div class="form-group">
+      <label for="exporterName">Importer Name:</label>
+      <input type="text" class="form-control" id="importerName" name="importerName" placeholder="Enter Exporter Name" >
+    </div>
+    
+     <div class="form-group">
+      <label for="selectExporter">Select Exporter:</label>
+<select  id="selectExporter" name="selectExporter"></select>
+    </div>
+    
+   
+    
+    
+     
+   
+    <input type="submit" class="btn btn-primary btn-block subBit" value="Submit">
+  </form>
+    </div>
+    
+    <div id="allOfferOption" class="container tab-pane active tableData"><br>
+       <h5 class="fontbold">All Purchase Orders</h5>
+       <br>
+       <div class="holder" id="hol">
+  <div class="preloader" id="prel"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+</div>
+       <table class="table-fill" id="allOffers" style="color:black;border:1px solid;font-size:14px;">
+  
+  </table>
+    </div>
+   
+  </div>
+  
+   <div class="modal fade" id="txSuccessModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:white;">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Transaction successful with TxID :</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+        
+	   <p class="fontbold customfontnew" style="color:black;" id="txHashstatus"> </p>
+	 
+  	  
+        
+        </div>
+        
+      
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<br>
+<div id="commonFooter"></div>
+<footer></footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script src="assets/js/commonHeaderNew.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+    <!--  <script src="assets/js/Properties.js"></script> -->
+     <script src="assets/js/orders.js"></script>
+       <script src="assets/js/ordersPost.js"></script>
+    
+</body>
+
+</html>

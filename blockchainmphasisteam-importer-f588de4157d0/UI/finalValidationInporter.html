@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Validation Importer -Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+      
+    <script src="assets/js/jquery.min.js"></script>
+       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+</head>
+
+<body >
+  
+        <div id="commonHeader"></div>
+      
+         
+   <div class="container" >
+<button class="buttonLink" onclick="goBack()">Go Back</button>
+ <h5 id="offerPlacedTitle">Details for Asset with ID:</h5>
+       <br>
+       <table class="table table-bordered " >
+       
+    
+       
+       <tr>
+       <td>Asset ID</td>
+       <td id="assetIdValue"></td>
+       <td>Asset Name</td>
+       <td id="assetName" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+       <td>Offer ID</td>
+       <td id="offerId"></td>
+       <td>Quantity</td>
+       <td id="quantity" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+      
+       <td>Unit</td>
+       <td id="unit" class="fontbold"></td>
+       
+        <td>Status</td>
+       <td id="status" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+      
+       <td>Price (MTK)</td>
+       <td id="price" class="fontbold"></td>
+       
+        <td>Created At</td>
+       <td id="createdAt" class="fontbold"></td>
+       </tr>
+  
+  	   <tr>
+  	   <td >Agreement ID</td>
+       <td  id="agreementId"></td>
+       <td >Message</td>
+       <td  id="message" class="fontbold"></td>
+     
+       </tr>
+       
+       
+  </table>
+  <br>
+   <h5 >Traders For Asset:</h5>
+  
+  
+     <table class="table table-bordered " >
+       
+       <tr>
+       <td>Exporter </td>
+       <td id="exporterName" class="fontbold"></td>
+       <td>Importer</td>
+       <td id="importerName" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+       <td>Exporter Port </td>
+       <td id="exporterPortName" class="fontbold"></td>
+       <td>Importer Port</td>
+       <td id="importerPortName" class="fontbold"></td>
+       </tr>
+       
+        
+       
+      
+  
+       
+  </table>
+  
+  <br>
+   <h5 >Documents Uploaded For Asset</h5>
+  
+  
+     <table class="table table-bordered " >
+       
+   <tr>
+	  <td>Insurance Document</td>
+	   <td ><a href="#" id="btnShow">View Document</a></td>
+	   <td>Packaging List Document</td>
+	  <td ><a href="#" id="btnShow2">View Document</a></td>
+	  </tr>
+  	   <tr>
+  	   
+  	    <tr>
+	  <td >Bill Of Lading</td>
+	   <td ><a href="#" id="btnShow3">View Document</a></td>
+	    <td >Goods Received</td>
+	   <td ><a href="#" id="btnShow4">View Document</a></td>
+	  </tr>
+     
+       
+        
+       
+      
+  
+       
+  </table>
+  
+   <br>
+   <h5 >Approval Status</h5>
+  
+  
+     <table class="table table-bordered " >
+       
+   <tr>
+   <td>Approval Type</td>
+	   <td >Initial</td>
+	  <td>Exporter</td>
+	   <td id="exporterValidation">Pending</td>
+	   <td>Importer</td>
+	   <td id="importerValidation">Pending</td>
+	 
+	    <td>Exporter Port</td>
+	   <td id="exporterPortValidation">Pending</td>
+	   
+	    <td>Initial Approval Completed</td>
+	   <td id="initialApprovalStatusValue">Pending</td>
+	  
+	  </tr>
+     
+
+      
+   <tr>
+     <td>Approval Type</td>
+	   <td >Final</td>
+	  <td>Exporter</td>
+	   <td id="exporterValidationFinal">Pending</td>
+	   <td>Importer</td>
+	   <td id="importerValidationFinal">Pending</td>
+	  
+	    <td>Importer Port</td>
+	   <td id="importerPortValidation">Pending</td>
+	   
+	    <td>Final Approval Completed</td>
+	   <td id="finalApprovalStatusValue">Pending</td>
+	  
+	  </tr>
+     
+       
+        
+       
+      
+  
+       
+  </table>
+  
+  </div>
+  
+
+  <br>
+ 
+    <div class="container">
+  <form  class="form-signin" action='' method='post'  id="finalvalidationimporterform"> 
+  
+ 
+  <!--   <form  class="form-signin" action='FinalValidationImporter' method='post'  >  -->
+  <input type="text" id="assetId" name="assetId"></input>
+  
+  <input type="submit" value="Approve Final Validation" class="btn btn-primary btn-block">
+  </form>
+  
+  
+  
+  
+    <div class="modal fade" id="txSuccessModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:white;">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Transaction successful with TxID :</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+        
+	   <p class="fontbold customfontnew" style="color:black;" id="txHashstatus"> </p>
+	 
+  	  
+        
+        </div>
+        
+      
+        
+      </div>
+    </div>
+  </div>
+  
+  </div>
+  <br>
+ 
+ 
+  
+  
+   <div id="dialog" style="display: none;width:700px;" >
+    
+        <iframe id="frame" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+
+  
+   <div id="dialog2" style="display: none;width:700px;" >
+    
+        <iframe id="frame2" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+ <div id="dialog3" style="display: none;width:700px;" >
+    
+        <iframe id="frame3" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+<div id="dialog4" style="display: none;width:700px;" >
+    
+        <iframe id="frame4" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+  <br>
+ 
+  
+<div id="commonFooter"></div>
+<footer></footer>
+   
+    <script src="assets/js/commonHeader.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+   <!--  <script src="assets/js/Properties.js"></script> -->
+     <script src="assets/js/FinalValidationImporter.js"></script>
+      <script src="assets/js/FinalValidationImporterPost.js"></script>
+    
+</body>
+
+</html>

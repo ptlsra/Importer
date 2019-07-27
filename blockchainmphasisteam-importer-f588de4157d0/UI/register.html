@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+        <link rel="stylesheet" href="assets/css/Customizable-Background--Overlay.css">
+    
+</head>
+
+<body style="margin:0px;">
+   
+       <div id="commonHeader"></div>
+   
+  <div id="mainLoginContent">
+        <div class="d-flex justify-content-center align-items-center" id="loginInnerContainer" >
+<div class="container pt-3" style="margin-bottom:90px;margin-top:50px;">
+  <div class="row justify-content-sm-center">
+    <div class="col-sm-10 col-md-6">
+      <div class="card border-info" id="greyBg">
+        <div class="card-header" id="loginLabel">Register as Importer</div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <img src="assets/img/loginimporterport.png">
+            </div>
+            <div class="col-md-8">
+            
+            <!--               <form class="form-signin" action="RegisterImporter" method="post"> -->
+              <form class="form-signin" action="" method="post" id="registerimporterform">
+                <input type="text" class="form-control mb-2" placeholder="Enter Importer Name" name="importerName" id="importerName" required autofocus>
+            <br>
+                            <input type="text" class="form-control mb-2" placeholder="Enter City" name="city" id="city" required autofocus>
+            
+               <p style="font-weight:bold;color:black;margin-top:5px;">Select Importer Port</p>	
+ 				<select  id="selectImporterPort" name="selectImporterPort">
+	
+				</select>
+				
+				<p style="font-weight:bold;color:black;margin-top:5px;">Select Importer Bank</p>	
+ 				<select  id="selectImporterBankList" name="selectImporterBankList" style="color:black;">
+	
+				</select>
+				<br>
+				
+                <input type="submit" class="btn btn-block mb-1"  id="loginButtonNew" value="Register">
+                
+              </form>
+              
+              
+              
+              
+    <div class="modal fade" id="txSuccessModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:white;">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Registration successful with TxID :</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+        
+	   <p class="fontbold customfontnew" style="color:black;" id="txHashstatus"> </p>
+	 
+  	  
+        
+        </div>
+        
+      
+        
+      </div>
+    </div>
+  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+    </div>
+    <div id="commonFooter"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+    <script src="assets/js/commonHeaderLogin.js"></script>
+   
+    <script src="assets/js/theme.js"></script>
+   <!--  <script src="assets/js/Properties.js"></script> -->
+      <script src="assets/js/register.js"></script>
+       <script src="assets/js/registerPost.js"></script>
+    
+</body>
+
+</html>

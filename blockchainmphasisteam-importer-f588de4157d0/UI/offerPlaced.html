@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Placed -Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+    <link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+</head>
+
+<body >
+  
+        <div id="commonHeader"></div>
+      
+        
+ <button class="buttonLink" onclick="goBack()" style="margin-left:940px;margin-top:10px;margin-bottom:10px''">Go Back</button>
+        
+  <div class="container" >
+
+ <h6 id="offerPlacedTitle" class="fontbold">Details for offer with ID:</h6>
+       <br>
+       <table class="table table-bordered"  >
+       
+         <tr>
+       <td>Agreement ID</td>
+       <td id="offerIdValue" class="fontbold"></td>
+       <td>Price (MTK)</td>
+       <td id="price"  class="fontbold"></td>
+       </tr>
+       
+        <tr>
+       <td>Asset Name</td>
+       <td id="assetName"  class="fontbold"></td>
+       <td>Asset Description</td>
+       <td id="assetDescription"></td>
+       </tr>
+       
+        <tr>
+       <td>Quantity</td>
+       <td id="quantity"  class="fontbold"></td>
+       <td>Unit</td>
+       <td id="unit"></td>
+       </tr>
+  
+  	   <tr>
+      
+      <td>Created At</td>
+      <td id="createdAt"  class="fontbold"></td>
+     
+        <td>Created By</td>
+      <td id="createdBy"  class="fontbold"></td>
+       </tr>
+       
+       
+         <tr>
+       <td >Exporter</td>
+      <td id="exporterName"  class="fontbold"></td>
+     
+ 
+      
+      <td >Offer Status</td>
+      <td   class="fontbold">Created</td>
+     
+      
+       </tr>
+  </table>
+  
+  <!--   <form class="form-signin" method="post" action="AcceptOfferNew" id="acceptoffernewform"> -->
+  <form class="form-signin" method="post" action="" id="acceptoffernewform">
+  <input type="text" id="agreementId" name="agreementId"></input>
+  <input type="text" id="importerName" name="importerName"></input>
+    <table  class="table table-bordered ">
+  <tr>
+  
+  <td>Select Importer Bank</td>
+   
+ 		
+				
+  <td><select  id="importerBankAddress" name="importerBankAddress"></select></td>
+  
+   <td >Select Importer Port</td>
+  <td >  <select  id="importerPortName" name="importerPortName"></select>
+  </td>
+  </tr>
+  
+  <tr>
+  <td colspan="2">Delivery Date</td>
+  <td colspan="2" ><input type="date" id="deliveryDate" name="deliveryDate"></td>
+  </tr>
+  </table>
+    <input type="text" id="importerBankName" name="importerBankName"></input>
+  
+  <input type="submit" value="Submit Details " class="btn btn-block mb-1" id="acceptOffer">
+  </form>
+  
+  
+  
+    <div class="modal fade" id="txSuccessModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:white;">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Transaction successful with TxID :</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+        
+	   <p class="fontbold customfontnew" style="color:black;" id="txHashstatus"> </p>
+	 
+  	  
+        
+        </div>
+        
+      
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  </div>
+  
+<div id="commonFooter" style="margin-top:100px;"></div>
+<footer></footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="DataTables/datatables.min.js"></script>
+    <script src="assets/js/commonHeader.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+    <!--   <script src="assets/js/Properties.js"></script> -->
+     <script src="assets/js/offerPlaced.js"></script>
+     <script src="assets/js/offerPlacedPost.js"></script>
+    
+</body>
+
+</html>

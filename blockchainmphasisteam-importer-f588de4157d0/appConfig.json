@@ -1,0 +1,12 @@
+{
+	"appIP":"0.0.0.0",
+	"appPort":"5002",
+	"mongoDBPort":"27017",
+	"mongoDBIP":"localhost",
+	"logLevel":"debug",
+	"importerWalletAddress":"0x383e8f4fa8b8a83518d6770f84d3ed116dc0265d",
+	"importerWalletPassword":"",
+	"ipfsURL":"/ip4/127.0.0.1/tcp/5001",
+	"web3HTTPProvider":"http://localhost:22007",
+	"appIpAddress":"localhost"
+}

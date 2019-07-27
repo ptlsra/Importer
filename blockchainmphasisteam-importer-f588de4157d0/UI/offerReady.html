@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Ready -Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+              <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+      
+    <script src="assets/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+</head>
+
+<body >
+  
+        <div id="commonHeader"></div>
+      
+         
+       <button class="buttonLink" onclick="goBack()" >Go Back</button>
+        
+   <div class="container" >
+  
+ <img src="assets/img/tick2.png"  class="b imageprop"><span>Purchase Order Created By Importer</span></img>
+      
+      
+            <div class="vl">
+            
+               <span  id="timeAgreementCreation" class="fontsizecustom margintime"> </span>
+           
+   <span  id="txId" class="fontsizecustom margintx"> </span>
+             
+            </div>
+           
+            
+            <img src="assets/img/tick2.png"  class="b imageprop">Pending Approval From Exporter</img>
+            <div class="vl">
+             <span  id="exporterApprovalTime" class="fontsizecustom margintime"> </span>
+           
+   			<span  id="txId2" class="fontsizecustom margintx"> </span>
+            </div>
+
+         
+        <img src="assets/img/tick2.png" class="b imageprop">Waiting for Importer to Upload Agreement Document</img>
+            <div class="vl">
+                   
+              <span  id="importerUploadTime" class="fontsizecustom margintime"> </span>
+           
+   			<span  id="txId3" class="fontsizecustom margintx"> </span>       
+            </div>  
+            
+              
+        <img src="assets/img/tick2.png" class="b imageprop">Exporter Approval for agreement Document</img>
+            <div class="vl">
+                   
+              <span  id="exporterValidateTime" class="fontsizecustom margintime"> </span>
+           
+   			<span  id="txId4" class="fontsizecustom margintx"> </span>       
+            </div> 
+            
+               <img src="assets/img/tick2.png" class="b imageprop">LOC From Importer Bank</img>
+            <div class="vl">
+                   
+              <span  id="uploadLocTime" class="fontsizecustom margintime"> </span>
+           
+   			<span  id="txId5" class="fontsizecustom margintx"> </span>       
+            </div> 
+            
+            <img src="assets/img/tick2.png" class="b imageprop  animated fadeIn slow">Validation Of LOC by Exporter Bank</img>
+            <div class="vl animated slideInUp slower">
+                   
+              <span  id="finalApproval" class="fontsizecustom margintime"> </span>
+           
+   			<span  id="txId6" class="fontsizecustom margintx"> </span>       
+            </div>
+            
+                <br>
+            
+            <div class="newOld">
+                   <div class="container" >
+ <h6 id="offerPlacedTitle"  class="fontbold">Details for offer with ID:</h6>
+       <br>
+       <table class="table table-bordered fontsizecustom " >
+       
+       <tr>
+       <td>Agreement ID</td>
+       <td id="offerIdValue" class="fontbold"></td>
+     
+        <td>Asset Name</td>
+       <td id="assetName"  class="fontbold"></td>
+       <td>Asset Description</td>
+       <td id="assetDescription"></td>
+       </tr>
+       
+      
+       
+        <tr>
+       <td>Quantity</td>
+       <td id="quantity"  class="fontbold"></td>
+       <td>Unit</td>
+       <td id="unit"></td>
+         <td>Price (MTK)</td>
+       <td id="price"  class="fontbold"></td>
+       </tr>
+  
+  	   <tr>
+      
+      <td>Created At</td>
+      <td id="createdAt"  class="fontbold"></td>
+     
+      
+        <td>Delivery Date</td>
+      <td id="deliveryDate"  class="fontbold"></td>
+        <td>Exporter</td>
+      <td id="createdBy"  class="fontbold"></td>
+       </tr>
+       
+       
+         <tr>
+      
+      <td>Exporter Bank</td>
+      <td id="exporterBankName"  class="fontbold"></td>
+     
+        <td colspan="2">Exporter Port</td>
+      <td colspan="2" id="exporterPortName"  class="fontbold"></td>
+       </tr>
+       
+        <tr>
+        
+        
+         <tr>
+      
+      <td>Importer Name</td>
+      <td id="importerNameValue"  class="fontbold"></td>
+     
+        <td>Importer Bank</td>
+      <td id="importerBankName"  class="fontbold"></td>
+       <td>Importer Port</td>
+      <td id="importerPortName"  class="fontbold"></td>
+     
+       </tr>
+       
+       
+       
+        <tr>
+        
+        <td >Agreement Document</td>
+      <td ><a href="#" id="btnShow">View Document</a></td>
+      
+      
+       <td colspan="2">LOC Document</td>
+      <td colspan="2"><a href="#" id="btnShow2">View Document</a></td>
+
+      </tr>
+      <tr>
+      <td colspan="3">Offer Status</td>
+      <td  colspan="3" class="fontbold" id="status">Agreement Created</td>
+     
+      
+       </tr>
+  </table>
+</div>
+   </div>
+       
+      
+      
+       <div class="modal fade" id="txModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bgwhite">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" >Transaction Details</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table table-bordered" >
+          <tr>
+          <td>Tx ID</td>
+          <td id="txIdValTx"></td>
+          </tr>
+          <tr>
+          <td>Event Name</td>
+          <td id="eventNameValTx"></td>
+          </tr>
+           <tr>
+          <td>Block Number</td>
+          <td id="blockNumberValTx"></td>
+          </tr>
+          <tr>
+          <td>Executed By</td>
+          <td id="executedByTxVal"></td>
+          </tr>
+          
+          <tr>
+          <td>TimeStamp</td>
+          <td id="timestampTxVal"></td>
+          </tr>
+          
+          </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+  
+ 
+  <div id="dialog" style="display: none;width:700px;" >
+    
+        <iframe id="frame" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+  <div id="dialog2" style="display: none;width:700px;" >
+    
+        <iframe id="frame2" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+ 
+  
+<div id="commonFooter"></div>
+<footer></footer>
+   
+    <script src="assets/js/commonHeaderNew.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+    <script src="assets/js/Properties.js"></script>
+     <script src="assets/js/offerReady.js"></script>
+        <script src="assets/js/Properties.js"></script>
+        <script src="assets/js/txOfferDetail.js"></script>
+    
+</body>
+
+</html>

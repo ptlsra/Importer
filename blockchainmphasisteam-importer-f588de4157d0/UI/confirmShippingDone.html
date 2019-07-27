@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending Arrival -Importer</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="assets/css/dh-row-text-image-right-responsive.css">
+      
+    <script src="assets/js/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+ 
+<script src="https://code.jquery.com/ui/1.11.1/jquery-ui.min.js"></script>
+       <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" /> 
+</head>
+
+<body >
+  
+         <div id="commonHeader"></div>
+         <div class="container" >
+       <button class="buttonLink" onclick="goBack()" >Go Back</button>
+        
+  
+<div class="steps">
+  <div class="step active" id="shippertab">Shipper
+  
+  
+  <p style="font-size:9px;margin-top:20px;margin-left:10px;" id="uploadDoc"></p>
+ 
+  </div>
+  <div class="step ">Exporter Port
+  <p style="font-size:9px;margin-top:20px;margin-left:10px;" id="exporterPortTab"></p>
+  </div>
+  <div class="step">Importer Port
+   <p style="font-size:9px;margin-top:10px;margin-left:10px;" id="importerPortTab"></p>
+  </div>
+  <div class="step">Importer
+  <p style="font-size:9px;margin-top:26px;margin-left:10px;" id="importerTab"></p>
+  </div>
+</div>
+<br>
+   <h6 id="offerPlacedTitle" class="fontbold">Details for Asset with ID:</h6>
+       <br>
+       <table class="table table-bordered customfontnew " >
+       
+       <tr>
+       <td>Asset ID</td>
+       <td id="assetIdValue"></td>
+         <td>Agreement ID</td>
+       <td id="agreementId"></td>
+       <td>Asset Name</td>
+       <td id="assetName" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+     
+       <td>Quantity</td>
+       <td id="quantity" class="fontbold"></td>
+       
+        
+      
+       <td>Unit</td>
+       <td id="unit" class="fontbold"></td>
+       <td>Price (MTK)</td>
+       <td id="price" class="fontbold"></td>
+       
+      
+       </tr>
+       
+        <tr>
+      
+       
+       
+        <td>Created At</td>
+       <td id="createdAt" class="fontbold"></td>
+  
+  	    <td>Status</td>
+       <td id="status" class="fontbold"></td>
+       <td >Message</td>
+       <td  id="message" class="fontbold"></td>
+     
+       </tr>
+       
+       
+  </table>
+  <br>
+   <h6 class="fontbold">Traders For Asset:</h6>
+  
+  
+     <table class="table table-bordered customfontnew" >
+       
+       <tr>
+       <td>Exporter </td>
+       <td id="exporterName" class="fontbold"></td>
+       <td>Importer</td>
+       <td id="importerName" class="fontbold"></td>
+       </tr>
+       
+        <tr>
+       <td>Exporter Port </td>
+       <td id="exporterPortName" class="fontbold"></td>
+       <td>Importer Port</td>
+       <td id="importerPortName" class="fontbold"></td>
+       </tr>
+       
+        
+       
+      
+  
+       
+  </table>
+  
+  
+   <h6 class="fontbold">Documents Uploaded For Asset</h6>
+  
+  
+     <table class="table table-bordered customfontnew" >
+       
+   <tr>
+	  <td>Insurance Document</td>
+	   <td ><a href="#" id="btnShow">View Document</a></td>
+	   <td>Packaging List Document</td>
+	  <td ><a href="#" id="btnShow2">View Document</a></td>
+	  </tr>
+  	   <tr>
+  	   
+     
+     
+       
+  </table>
+  
+  
+     <table class="table table-bordered customfontnew" >
+       
+   <tr>
+	  
+  	    <tr>
+	  <td >Bill Of Lading</td>
+	   <td ><button type="button" class="buttonLinkNew" data-toggle="modal" data-target="#myModal">
+    View Document
+  </button></td>
+  
+  <td >Created At</td>
+	   <td id="bolcreation" class="fontbold"></td>
+	   <td >Owned By</td>
+	   <td id="bolownerBy" class="fontbold"></td>
+	    <!--  <td >History</td>
+	  <td id="" class="fontbold">  <a href="#" id="bolHistory">View History</a></td> -->  
+	  
+	  </tr>
+     
+     
+       
+  </table>
+  
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="background-color:white;">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Bill Of Lading</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+         
+        
+	   <p class="fontbold customfontnew" style="color:black;"> *** You are not authorized to view this document. </span> </p>
+	 
+  	  
+        
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+   <div class="modal fade" id="txModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bgwhite">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" >Transaction Details</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <table class="table table-bordered" >
+          <tr>
+          <td>Tx ID</td>
+          <td id="txIdValTx"></td>
+          </tr>
+          <tr>
+          <td>Event Name</td>
+          <td id="eventNameValTx"></td>
+          </tr>
+           <tr>
+          <td>Block Number</td>
+          <td id="blockNumberValTx"></td>
+          </tr>
+          <tr>
+          <td>Executed By</td>
+          <td id="executedByTxVal"></td>
+          </tr>
+          
+          <tr>
+          <td>TimeStamp</td>
+          <td id="timestampTxVal"></td>
+          </tr>
+          
+          </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- BOL History  -->
+  
+  <div class="modal fade" id="bolModal">
+    <div class="modal-dialog  modal-lg">
+      <div class="modal-content bgwhite ">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" >Bill Of Lading History</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body customfontnew">
+          <table class="table table-bordered" id="bolTable" >
+         
+          
+          
+          </table>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+ 
+ 
+ </div>
+
+   <div id="dialog" style="display: none;width:700px;" >
+    
+        <iframe id="frame" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+
+  
+   <div id="dialog2" style="display: none;width:700px;" >
+    
+        <iframe id="frame2" style="width:600px;height:400px;"></iframe>
+        
+
+</div>
+
+    <br>
+      <br>
+        <br>
+ 
+  
+<div id="commonFooter"></div>
+   
+   
+    
+</body>
+ <script src="assets/js/commonHeaderNew.js"></script>
+    <script src="assets/js/commonFooter.js"></script>
+    <script src="assets/js/Properties.js"></script>
+     <script src="assets/js/confirmShipping.js"></script>
+       <script src="assets/js/Properties.js"></script>
+        <script src="assets/js/txDataDetail.js"></script>
+    
+     <script src="assets/js/Properties.js"></script>
+        <script src="assets/js/bolDetail.js"></script>
+  
+
+     
+
+</html>
